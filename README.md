@@ -19,8 +19,13 @@ Minimal example that sends both a heartbeat and an incrementing counter message 
 Connect via Mission Planner (or other mavlink GCS) to see the messages.
 
 ## mavlink_send_attitude
-Example of how to send messages via mavlink.  
+Example of how to send messages via mavlink.
 This example fakes attitude data for the HUD in Mission Planner.
 
 ## mavlink_with_vehicle
 Example file of how to use mavlink to get data from another flight controller (such as a Pixhawk running Ardupilot or PX4) and display it through the Arduino.
+
+# Contributions
+Submit a PR if there's any silly mistakes I've made with the code (or potential improvements).
+As the messages to send and receive are very much dependent on the project at hand, I suggest you fork this repo to get yourself started and develop in your own repo, rather than submitting a PR here adding a particular message.
+The idea is to keep this repo simple so it can be used as a stepping stone for other's future projects :).

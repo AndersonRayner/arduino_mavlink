@@ -8,6 +8,10 @@ Created using the great instructions at ```https://discuss.ardupilot.org/t/mavli
 git clone --recursive git@github.com:AndersonRayner/arduino_mavlink.git
 ```
 
+This repo contains some extra functionality including adding Parameters that can be modified in real-time through your favourite mavlink GCS such as Mission Planner or qgroundcontrol.
+Just have a look at ```mavlink/src/mavlink_parameters.cpp``` and ```mavlink/src/parameters.h``` to see how it is done.
+One day I'll get to writing a blog post to properly explain everything...
+
 # Installation
 Install the ```mavlink``` folder directly into your Arduino libraries folder.
 Make sure to also pull the submodules for this to work (or clone with the --recursive flag).

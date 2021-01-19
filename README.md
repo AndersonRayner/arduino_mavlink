@@ -11,6 +11,7 @@ git clone --recursive git@github.com:AndersonRayner/arduino_mavlink.git
 # Installation
 Install the ```mavlink``` folder directly into your Arduino libraries folder.
 Make sure to also pull the submodules for this to work (or clone with the --recursive flag).
+The submodule is for the official auto-generated C/C++ headers for mavlink available at ```https://github.com/mavlink/c_library_v2```.
 
 # Example Files
 ## mavlink_minimum

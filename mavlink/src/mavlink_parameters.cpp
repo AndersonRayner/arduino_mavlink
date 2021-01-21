@@ -23,13 +23,15 @@ void COMMS_MAVLINK::init_parameters(void) {
     
     // Initialise the names for the parameters.
     // Reset them to the default value if the eeprom checksum failed
-    set_name_and_default(PARAM_1, "TEST_PARAM_1", 10.0f );
-    set_name_and_default(PARAM_2, "TEST_PARAM_2",  8.0f );
-    set_name_and_default(PARAM_3, "TEST_PARAM_3", 20.0f );
-    set_name_and_default(PARAM_4, "TEST_PARAM_4",  2.0f );
+    char p_name[16];
     
-    set_name_and_default(RESET_EERPOM,    "RESET_EERPOM",     0.0f );
-    set_name_and_default(EEPROM_CHECKSUM, "EEPROM_CHECKSUM",  0.0f );
+    sprintf(p_name, "TEST_PARAM_1"); set_name_and_default(PARAM_1, p_name, 10.0f );
+    sprintf(p_name, "TEST_PARAM_2"); set_name_and_default(PARAM_2, p_name,  8.0f );
+    sprintf(p_name, "TEST_PARAM_3"); set_name_and_default(PARAM_3, p_name, 20.0f );
+    sprintf(p_name, "TEST_PARAM_4"); set_name_and_default(PARAM_4, p_name,  2.0f );
+    
+    sprintf(p_name, "RESET_EERPOM");    set_name_and_default(RESET_EERPOM,    p_name,  0.0f );
+    sprintf(p_name, "EEPROM_CHECKSUM"); set_name_and_default(EEPROM_CHECKSUM, p_name,  0.0f );
     
     // Save parameters to the eeprom
     _params.p_value[EEPROM_CHECKSUM] = eeprom_checksum();
